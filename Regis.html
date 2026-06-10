@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+form{
+    background:white;
+    width:600px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#333;
+    margin-bottom:25px;
+}
+
+h3{
+    color:#444;
+    margin:15px 0 10px;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea{
+    width:100%;
+    padding:12px 15px;
+    margin-top:8px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    background:#f8f9fa;
+    transition:0.3s;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+select:focus,
+textarea:focus{
+    border-color:#2575fc;
+    outline:none;
+    background:white;
+}
+
+.radio-group,
+.checkbox-group{
+    margin:10px 0;
+}
+
+.radio-group label,
+.checkbox-group label{
+    display:block;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+input[type=radio],
+input[type=checkbox]{
+    margin-right:8px;
+}
+
+select{
+    cursor:pointer;
+}
+
+textarea{
+    resize:none;
+}
+
+input[type=submit]{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#2575fc;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+input[type=submit]:hover{
+    background:#1a5edb;
+    transform:translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<form action="/action.php">
+
+    <h1>User Registration Form</h1>
+
+    <input type="text" placeholder="Enter Username" required>
+
+    <br><br>
+
+    <input type="text" placeholder="Enter Email or Mobile Number" required>
+
+    <br><br>
+
+    <input type="password" placeholder="Enter Password" required>
+
+    <br><br>
+
+    <h3>Select Your Class</h3>
+
+    <div class="radio-group">
+        <label>
+            <input type="radio" value="class XI" name="class"> Class XI
+        </label>
+
+        <label>
+            <input type="radio" value="class XII" name="class"> Class XII
+        </label>
+    </div>
+
+    <h3>Select Subjects</h3>
+
+    <div class="checkbox-group">
+        <label>
+            <input type="checkbox" value="Math" name="subject"> Math
+        </label>
+
+        <label>
+            <input type="checkbox" value="English" name="subject"> English
+        </label>
+
+        <label>
+            <input type="checkbox" value="History" name="subject"> History
+        </label>
+
+        <label>
+            <input type="checkbox" value="Hindi" name="subject"> Hindi
+        </label>
+    </div>
+
+    <h3>Select City</h3>
+
+    <select name="city">
+        <option value="">Choose City</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+        <option value="Gurgaon">Gurgaon</option>
+    </select>
+
+    <br><br>
+
+    <h3>Feedback</h3>
+
+    <textarea
+        name="feedback"
+        placeholder="Please give your feedback here..."
+        rows="6"
+        cols="40"></textarea>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
